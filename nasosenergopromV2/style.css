@@ -1,0 +1,239 @@
+/* ===== БАЗА ===== */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* для липкого футера */
+}
+
+/* Контент між хедером і футером */
+.site-content {
+    flex: 1 0 auto; /* розтягуємо контент, щоб футер був внизу */
+    padding-bottom: 40px;
+}
+
+.container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== ХЕДЕР ===== */
+
+.site-header {
+    background-color: #003366;
+    color: #fff;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-main {
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+}
+
+.logo-sub {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== ТЕКСТОВІ ЕЛЕМЕНТИ ===== */
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* ===== ГОЛОВНИЙ БЛОК (ГОЛОВНА СТОРІНКА) ===== */
+
+.hero {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin: 10px 0 15px;
+}
+
+/* Картки з інформацією на головній */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.06);
+}
+
+/* ===== СПИСКИ ===== */
+
+.list-block {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.list-block li {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.04);
+}
+
+/* ===== КОНТАКТИ ===== */
+
+.contacts-block {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.06);
+    margin-bottom: 15px;
+}
+
+/* ===== ФОРМА ===== */
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.06);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* ===== КНОПКИ ===== */
+
+.btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 18px;
+    background-color: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #004f99;
+}
+
+/* ===== ПОВІДОМЛЕННЯ ===== */
+
+.alert {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+/* ===== ФУТЕР ===== */
+
+.site-footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 13px;
+    margin-top: auto;      /* ключова штука */
+    flex-shrink: 0;        /* не стискається */
+}
+
+.footer-inner {
+    text-align: center;
+}
+
+/* ===== АДАПТАЦІЯ ===== */
+
+@media (max-width: 600px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        margin-top: 10px;
+    }
+
+    .main-nav a {
+        margin-left: 0;
+        margin-right: 10px;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
